@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <title>AngularJS Expressions</title>
+   </head>
+
+   <body>
+      <h1>Programming Activity 1</h1>
+
+      <div ng-app = "" ng-init = "pizzas = [{bestseller:  'buffalo chicken',beverage: '1.5L Pepsi',name: 'Pizza Hut'},{bestseller: 'thin crust',beverage: 'Slush Coolers',name: 'Greenwich'}, {bestseller: 'newyork pizza',beverage: 'Sola Icedtea',name: 'Yellow Cab' }, {bestseller: 'garlic and shrimp',beverage: 'Unli Refill Softdrinks',name: 'S&R'}, {bestseller: 'managers choice',beverage:'House blend iced tea',name: 'Shakeys'}];
+         student = {firstname:'Mahesh',lastname:'Parashar',contactno:'0917777777',shs:'Rizal High School',course:'BSIT'};
+         address = {housenumber: '911',alley:'recto ave',city: 'manila'};
+         subjects = [{name: 'Science',grade: '85',field: 'Biology' }, {name: 'Math',grade: '85',field: 'Algebra'}, {name: 'English',grade: '80',field: 'Communication Arts' }, {name: 'Filipino',grade: '87',field: 'Retorika'}, {name: 'PE',grade: '82',field: 'Individual and Dual Sports'}]">
+         <p>Name: {{student.firstname + " " + student.lastname}}</p>
+         <p>Address: {{address.housenumber + " " + address.alley + " " + address.city}}</p>
+         <p>Contact number: {{student.contactno}}</p>
+         <p>Course: {{student.course}}
+         <p>Senior High School: {{student.shs}}</p>
+         <p>Subjects Grades and Remarks</p>
+
+         <ol>
+            <li ng-repeat = "subject in subjects" >
+              {{'Subject: ' + subject.name + ', Branch: ' + subject.field +', Grade: ' + subject.grade }}
+            </li>
+        </ol>
+
+         <p>List of Favourite Pizza Resto and bestseller:</p>
+
+         <ol>
+           <li ng-repeat = "pizza in pizzas">
+             {{'Restautant:  '  +  pizza.name + ',  BestSeller:  ' + pizza.bestseller + ', Beverage: '+ pizza.beverage }}
+           </li>
+        </ol>
+
+
+      </div>
+
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+
+   </body>
+</html>
