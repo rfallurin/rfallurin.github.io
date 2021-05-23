@@ -9,6 +9,7 @@
       <div ng-app = "" ng-init = "pizzas = [{bestseller:  'buffalo chicken',beverage: '1.5L Pepsi',name: 'Pizza Hut'},{bestseller: 'thin crust',beverage: 'Slush Coolers',name: 'Greenwich'}, {bestseller: 'newyork pizza',beverage: 'Sola Icedtea',name: 'Yellow Cab' }, {bestseller: 'garlic and shrimp',beverage: 'Unli Refill Softdrinks',name: 'S&R'}, {bestseller: 'managers choice',beverage:'House blend iced tea',name: 'Shakeys'}];
          student = {firstname:'Mahesh',lastname:'Parashar',contactno:'0917777777',shs:'Rizal High School',course:'BSIT'};
          address = {housenumber: '911',alley:'recto ave',city: 'manila'};
+         highSchool_ave = [88,90,84,79,87,85];
          subjects = [{name: 'Science',grade: '85',field: 'Biology' }, {name: 'Math',grade: '85',field: 'Algebra'}, {name: 'English',grade: '80',field: 'Communication Arts' }, {name: 'Filipino',grade: '87',field: 'Retorika'}, {name: 'PE',grade: '82',field: 'Individual and Dual Sports'}]">
          <p>Name: {{student.firstname + " " + student.lastname}}</p>
          <p>Address: {{address.housenumber + " " + address.alley + " " + address.city}}</p>
@@ -20,6 +21,7 @@
          <ol>
             <li ng-repeat = "subject in subjects" >
               {{'Subject: ' + subject.name + ', Branch: ' + subject.field +', Grade: ' + subject.grade }}
+               <p> Average (Gr.12): {{highSchool_ave[5]}}</p>
             </li>
         </ol>
 
