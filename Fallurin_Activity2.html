@@ -9,6 +9,7 @@
       <h2>Programming Activity2</h2>
 
       <div ng-app = "mainApp" ng-controller = "studentController">
+        <p>Full Name </p>
          Enter first name: <input type = "text" ng-model = "student.firstName"><br>
          <br>
          Enter midle name: <input type = "text" ng-model = "student.midleName"><br>
@@ -26,8 +27,22 @@
          <br>
          {{student.details()}}
          <br>
+        <p>Grades in Subjects </p>
+         Math: <input type = "text" ng-model= "student.math"><br>
          <br>
-
+         Science: <input type = "text" ng-model= "student.science"><br>
+         <br>
+         English: <input type = "text" ng-model= "student.english"><br>
+         <br>
+         Filipino: <input type = "text" ng-model= "student.filipino"><br>
+         <br>
+         TLE: <input type = "text" ng-model= "student.tle"><br>
+         <br>
+         Grade: <input type = "text" ng-model= "student.gr"><br>
+         <br>
+         {{student.grades()}}
+         <br>
+         {{student.remarks()}}
 
       </div>
 
@@ -36,12 +51,19 @@
 
          mainApp.controller('studentController', function($scope) {
             $scope.student = {
-               firstName: "Mahesh",
-               midleName: "Doging",
-               lastName: "Parashar",
+               firstName: "Isko",
+               midleName: "Domagoso",
+               lastName: "Moreno",
                strand: "STEM",
                grade: "12",
-			   school: "De La Salle Araneta University",
+	       school: "Tondo High School",
+               math: "80",
+               science: "85",
+               english: "83",
+               filipino: "88",
+               tle: "86",
+               gr: "PASSED",
+
 
                fullName: function() {
                   var studentObject;
@@ -53,7 +75,22 @@
                 var studentObject;
                   studentObject = $scope.student;
                   return "Your strand, grade level and school are: " + studentObject.strand + " " + studentObject.grade + " " + studentObject.school;
-			         }
+
+                },
+
+                grades: function() {
+                 var studentObject;
+                   studentObject = $scope.student;
+                   return "Your Grades are: " + studentObject.math + " " + studentObject.science + " " + studentObject.english + " " + studentObject.filipino + " " + studentObject.tle;
+
+                 },
+
+                 remarks: function() {
+                  var studentObject;
+                    studentObject = $scope.student;
+                    return "Remarks: " + studentObject.gr;
+
+               }
 
 
             };
@@ -61,3 +98,4 @@
       </script>
 
    </body>
+
