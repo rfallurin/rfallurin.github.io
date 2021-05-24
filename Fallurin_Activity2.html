@@ -1,0 +1,63 @@
+<html>
+   <head>
+      <title>Performance Task2</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+   </head>
+
+   <body>
+      <h2>Programming Activity2</h2>
+
+      <div ng-app = "mainApp" ng-controller = "studentController">
+         Enter first name: <input type = "text" ng-model = "student.firstName"><br>
+         <br>
+         Enter midle name: <input type = "text" ng-model = "student.midleName"><br>
+         <br>
+         Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+         <br>
+         {{student.fullName()}}
+         <br>
+         <br>
+         Enter Strand: <input type = "text" ng-model= "student.strand"><br>
+         <br>
+         Enter Grade level: <input type = "text" ng-model= "student.grade"><br>
+         <br>
+         Name of Your School: <input type = "text" ng-model= "student.school"><br>
+         <br>
+         {{student.details()}}
+         <br>
+         <br>
+
+
+      </div>
+
+      <script>
+         var mainApp = angular.module("mainApp", []);
+
+         mainApp.controller('studentController', function($scope) {
+            $scope.student = {
+               firstName: "Mahesh",
+               midleName: "Doging",
+               lastName: "Parashar",
+               strand: "STEM",
+               grade: "12",
+			   school: "De La Salle Araneta University",
+
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.student;
+                  return "Full Name: " + studentObject.firstName + " " + studentObject.midleName+ " " + studentObject.lastName;
+               },
+
+               details: function() {
+                var studentObject;
+                  studentObject = $scope.student;
+                  return "Your strand, grade level and school are: " + studentObject.strand + " " + studentObject.grade + " " + studentObject.school;
+			         }
+
+
+            };
+         });
+      </script>
+
+   </body>
