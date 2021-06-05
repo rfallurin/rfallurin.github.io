@@ -1,0 +1,275 @@
+<html>
+   <head>
+      <title>Programming Activity</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+   </head>
+
+   <body>
+      <h2>Programming Activity#3</h2>
+
+      <div ng-app = "mainApp" ng-controller = "studentController">
+        <p>Full Name </p>
+         Enter first name: <input type = "text" ng-model = "student.firstName"><br>
+         <br>
+         Enter midle name: <input type = "text" ng-model = "student.midleName"><br>
+         <br>
+         Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+         <br>
+         {{student.fullName()}}
+         <br>
+         <br>
+         Enter Strand: <input type = "text" ng-model= "student.strand"><br>
+         <br>
+         Enter Grade level: <input type = "text" ng-model= "student.grade"><br>
+         <br>
+         Name of Your School: <input type = "text" ng-model= "student.school"><br>
+         <br>
+         {{student.details()}}
+         <br>
+        <p>Grades in Subjects </p>
+         Math: <input type = "text" ng-model= "student.math"><br>
+         <br>
+         Science: <input type = "text" ng-model= "student.science"><br>
+         <br>
+         English: <input type = "text" ng-model= "student.english"><br>
+         <br>
+         Filipino: <input type = "text" ng-model= "student.filipino"><br>
+         <br>
+         TLE: <input type = "text" ng-model= "student.tle"><br>
+         <br>
+         Grade: <input type = "text" ng-model= "student.gr"><br>
+         <br>
+         {{student.grades()}}
+         <br>
+         {{student.remarks()}}
+
+
+
+        <div ng-controller = "student2Controller">
+
+          <p>Full Name </p>
+           Enter first name: <input type = "text" ng-model = "student.firstName"><br>
+           <br>
+           Enter midle name: <input type = "text" ng-model = "student.midleName"><br>
+           <br>
+           Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+           <br>
+           {{student.fullName()}}
+           <br>
+           <br>
+           Enter Strand: <input type = "text" ng-model= "student.strand"><br>
+           <br>
+           Enter Grade level: <input type = "text" ng-model= "student.grade"><br>
+           <br>
+           Name of Your School: <input type = "text" ng-model= "student.school"><br>
+           <br>
+           {{student.details()}}
+           <br>
+          <p>Grades in Subjects </p>
+           Math: <input type = "text" ng-model= "student.math"><br>
+           <br>
+           Science: <input type = "text" ng-model= "student.science"><br>
+           <br>
+           English: <input type = "text" ng-model= "student.english"><br>
+           <br>
+           Filipino: <input type = "text" ng-model= "student.filipino"><br>
+           <br>
+           TLE: <input type = "text" ng-model= "student.tle"><br>
+           <br>
+           Grade: <input type = "text" ng-model= "student.gr"><br>
+           <br>
+           {{student.grades()}}
+           <br>
+           {{student.remarks()}}
+
+
+        <div ng-controller = "student3Controller">
+
+
+        <p>Full Name </p>
+         Enter first name: <input type = "text" ng-model = "student.firstName"><br>
+         <br>
+         Enter midle name: <input type = "text" ng-model = "student.midleName"><br>
+         <br>
+         Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+         <br>
+         {{student.fullName()}}
+         <br>
+         <br>
+         Enter Strand: <input type = "text" ng-model= "student.strand"><br>
+         <br>
+         Enter Grade level: <input type = "text" ng-model= "student.grade"><br>
+         <br>
+         Name of Your School: <input type = "text" ng-model= "student.school"><br>
+         <br>
+         {{student.details()}}
+         <br>
+        <p>Grades in Subjects </p>
+         Math: <input type = "text" ng-model= "student.math"><br>
+         <br>
+         Science: <input type = "text" ng-model= "student.science"><br>
+         <br>
+         English: <input type = "text" ng-model= "student.english"><br>
+         <br>
+         Filipino: <input type = "text" ng-model= "student.filipino"><br>
+         <br>
+         TLE: <input type = "text" ng-model= "student.tle"><br>
+         <br>
+         Grade: <input type = "text" ng-model= "student.gr"><br>
+         <br>
+         {{student.grades()}}
+         <br>
+         {{student.remarks()}}
+
+
+
+
+      </div>
+
+      <script>
+         var mainApp = angular.module("mainApp", []);
+
+         mainApp.controller('studentController', function($scope) {
+            $scope.student = {
+               firstName: "Ronald Chester",
+               midleName: "Fran",
+               lastName: "Fallurin",
+               strand: "STEM",
+               grade: "12",
+			   school: "Osmenia High School",
+              math: "80",
+              science: "82",
+              english: "84",
+              filipino: "83",
+              tle: "85",
+              gr: "PASSED",
+
+
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.student;
+                  return "Your name is: " + studentObject.firstName + " " + studentObject.midleName+ " " + studentObject.lastName;
+               },
+
+               details: function() {
+                var studentObject;
+                  studentObject = $scope.student;
+                  return "Your strand, grade level and school are: " + studentObject.strand + " " + studentObject.grade + " " + studentObject.school;
+
+                },
+
+                grades: function() {
+                 var studentObject;
+                   studentObject = $scope.student;
+                   return "Your Grades are: " + studentObject.math + " " + studentObject.science + " " + studentObject.english + " " + studentObject.filipino + " " + studentObject.tle;
+
+                 },
+
+                 remarks: function() {
+                  var studentObject;
+                    studentObject = $scope.student;
+                    return "Remarks: " + studentObject.gr;
+
+               }
+
+
+            };
+         });
+
+         mainApp.controller('student2Controller', function($scope) {
+            $scope.student = {
+               firstName: "Isko",
+               midleName: "Moreno",
+               lastName: "Domagoso",
+               strand: "STEM",
+               grade: "12",
+			   school: "Tondo High School",
+              math: "84",
+              science: "85",
+              english: "85",
+              filipino: "86",
+              tle: "88",
+              gr: "PASSED",
+
+
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.student;
+                  return "Your name is: " + studentObject.firstName + " " + studentObject.midleName+ " " + studentObject.lastName;
+               },
+
+               details: function() {
+                var studentObject;
+                  studentObject = $scope.student;
+                  return "Your strand, grade level and school are: " + studentObject.strand + " " + studentObject.grade + " " + studentObject.school;
+
+                },
+
+                grades: function() {
+                 var studentObject;
+                   studentObject = $scope.student;
+                   return "Your Grades are: " + studentObject.math + " " + studentObject.science + " " + studentObject.english + " " + studentObject.filipino + " " + studentObject.tle;
+
+                 },
+
+                 remarks: function() {
+                  var studentObject;
+                    studentObject = $scope.student;
+                    return "Remarks: " + studentObject.gr;
+
+               }
+
+
+            };
+         });
+
+         mainApp.controller('student3Controller', function($scope) {
+            $scope.student = {
+               firstName: "Jose",
+               midleName: "Marcelo",
+               lastName: "Ejercito",
+               strand: "TECHVOC",
+               grade: "12",
+			   school: " Ateneo High School",
+              math: "70",
+              science: "73",
+              english: "75",
+              filipino: "77",
+              tle: "74",
+              gr: "FAILED",
+
+
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.student;
+                  return "Your name is: " + studentObject.firstName + " " + studentObject.midleName+ " " + studentObject.lastName;
+               },
+
+               details: function() {
+                var studentObject;
+                  studentObject = $scope.student;
+                  return "Your strand, grade level and school are: " + studentObject.strand + " " + studentObject.grade + " " + studentObject.school;
+
+                },
+
+                grades: function() {
+                 var studentObject;
+                   studentObject = $scope.student;
+                   return "Your Grades are: " + studentObject.math + " " + studentObject.science + " " + studentObject.english + " " + studentObject.filipino + " " + studentObject.tle;
+
+                 },
+
+                 remarks: function() {
+                  var studentObject;
+                    studentObject = $scope.student;
+                    return "Remarks: " + studentObject.gr;
+
+               }
+
+
+            };
+         });
+      </script>
+
+   </body>
