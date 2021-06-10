@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <style>body {font-size: 1.2em; }</style>
+        <title> Advance Web Dev 2</title>
+    </head>
+    <body>
+        <h1>Midterm Activity</h1>
+        <div ng-controller='MsgController'>
+            {{name}} has a Message: <br>
+            {{sayMessage()}}
+        <div> 
+            <button ng-click="makeSleep()">Make him Sleep</button>
+            <br>
+            <img ng-src="images/cat_{{stateOfBeing}}.jpg">
+        </div>
+    </body>
+</html>
